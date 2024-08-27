@@ -248,6 +248,7 @@ int main(int argc, char **argv)
 
 ### Block Size = 1024
 ![1024](https://github.com/user-attachments/assets/f4c14b3b-2385-436a-97a1-60cec78494d8)
+
 The number of threads per block is 1,023, which is close to the maximum limit of 1,024, but not evenly divisible by the total vector size.Uses exactly 1,024 threads per block, which is optimal because it aligns perfectly with the CUDA architecture's warp size (32 threads per warp).Execution 2 is faster (0.001021 sec) compared to Execution 1 (0.001084 sec).
 
 
@@ -256,6 +257,7 @@ The number of threads per block is 1,023, which is close to the maximum limit of
 
 ### Block Size = 512
 ![512](https://github.com/user-attachments/assets/d3c29dbf-bd25-4a7b-8841-61d3a1a31aaf)
+
 Execution 1 uses more blocks (65536) with fewer threads per block (256), while Execution 2 uses fewer blocks (32768) with more threads per block (512).Execution 1 is slightly faster, with a time of 0.001000 sec compared to 0.001053 sec in Execution 2.
 
 ## RESULT:
