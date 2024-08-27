@@ -243,14 +243,17 @@ int main(int argc, char **argv)
 ```
 
 ## OUTPUT:
-### Block Size = 512
-![Screenshot 2024-08-27 091857](https://github.com/user-attachments/assets/2294616d-1ecc-4eb5-99f2-727e485dc90e)
+### Block Size = 1023
+![1023](https://github.com/user-attachments/assets/9fac9972-968a-4ecd-b5c9-0df114b015ab)
+
+### Block Size = 1024
+![Screenshot 2024-08-27 092234](https://github.com/user-attachments/assets/2924d606-458b-43ec-871f-867498f6e6ea)
 
 ### Block Size = 256
 ![Screenshot 2024-08-27 092149](https://github.com/user-attachments/assets/e3825253-e3c6-446b-83fc-b79d511263ba)
 
-### Block Size = 1024
-![Screenshot 2024-08-27 092234](https://github.com/user-attachments/assets/2924d606-458b-43ec-871f-867498f6e6ea)
+### Block Size = 512
+![Screenshot 2024-08-27 091857](https://github.com/user-attachments/assets/2294616d-1ecc-4eb5-99f2-727e485dc90e)
 
 ## RESULT:
 Thus, Implementation of sum arrays on host and device is done in nvcc cuda using random number.
