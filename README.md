@@ -247,13 +247,16 @@ int main(int argc, char **argv)
 ![1023](https://github.com/user-attachments/assets/9fac9972-968a-4ecd-b5c9-0df114b015ab)
 
 ### Block Size = 1024
-![Screenshot 2024-08-27 092234](https://github.com/user-attachments/assets/2924d606-458b-43ec-871f-867498f6e6ea)
+![1024](https://github.com/user-attachments/assets/f4c14b3b-2385-436a-97a1-60cec78494d8)
+The number of threads per block is 1,023, which is close to the maximum limit of 1,024, but not evenly divisible by the total vector size.Uses exactly 1,024 threads per block, which is optimal because it aligns perfectly with the CUDA architecture's warp size (32 threads per warp).Execution 2 is faster (0.001021 sec) compared to Execution 1 (0.001084 sec).
+
 
 ### Block Size = 256
-![Screenshot 2024-08-27 092149](https://github.com/user-attachments/assets/e3825253-e3c6-446b-83fc-b79d511263ba)
+![256](https://github.com/user-attachments/assets/12084e7d-782b-4e43-96f3-6828af317522)
 
 ### Block Size = 512
-![Screenshot 2024-08-27 091857](https://github.com/user-attachments/assets/2294616d-1ecc-4eb5-99f2-727e485dc90e)
+![512](https://github.com/user-attachments/assets/d3c29dbf-bd25-4a7b-8841-61d3a1a31aaf)
+Execution 1 uses more blocks (65536) with fewer threads per block (256), while Execution 2 uses fewer blocks (32768) with more threads per block (512).Execution 1 is slightly faster, with a time of 0.001000 sec compared to 0.001053 sec in Execution 2.
 
 ## RESULT:
 Thus, Implementation of sum arrays on host and device is done in nvcc cuda using random number.
